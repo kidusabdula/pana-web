@@ -55,9 +55,9 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.141 0.005 285.823);
   
-  /* Primary - Pana Orange */
-  --primary: oklch(0.65 0.22 30); /* Vibrant orange #FF6B00 */
-  --primary-foreground: oklch(1 0 0); /* White text on orange */
+  /* Primary - Pana Light Yellow */
+  --primary: oklch(0.85 0.18 75); /* Light yellow matching logo */
+  --primary-foreground: oklch(0.09 0.01 285.823); /* Dark text on light yellow */
   
   /* Secondary - Light gray with subtle warmth */
   --secondary: oklch(0.97 0.01 30); /* Warm light gray */
@@ -67,32 +67,32 @@
   --muted: oklch(0.96 0.005 286.375);
   --muted-foreground: oklch(0.552 0.016 285.938);
   
-  /* Accent - Light orange */
-  --accent: oklch(0.85 0.15 30); /* Light orange accent */
+  /* Accent - Light yellow */
+  --accent: oklch(0.90 0.12 75); /* Light yellow accent */
   --accent-foreground: oklch(0.141 0.005 285.823);
   
   /* Destructive - Red for errors */
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.92 0.004 286.32);
   --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.65 0.22 30); /* Orange ring to match primary */
+  --ring: oklch(0.85 0.18 75); /* Light yellow ring to match primary */
   
   /* Chart colors - Pana themed */
-  --chart-1: oklch(0.65 0.22 30); /* Orange */
+  --chart-1: oklch(0.85 0.18 75); /* Light yellow matching logo */
   --chart-2: oklch(0.21 0.006 285.885); /* Dark gray */
-  --chart-3: oklch(0.85 0.15 30); /* Light orange */
+  --chart-3: oklch(0.90 0.12 75); /* Light yellow matching logo */
   --chart-4: oklch(0.96 0.005 286.375); /* Light gray */
   --chart-5: oklch(0.552 0.016 285.938); /* Muted gray */
   
   /* Sidebar colors */
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-primary: oklch(0.65 0.22 30); /* Orange */
-  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-primary: oklch(0.85 0.18 75); /* Light yellow matching logo */
+  --sidebar-primary-foreground: oklch(0.09 0.01 285.823);
   --sidebar-accent: oklch(0.967 0.001 286.375);
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.65 0.22 30); /* Orange */
+  --sidebar-ring: oklch(0.85 0.18 75); /* Light yellow matching logo */
 }
 
 .dark {
@@ -104,9 +104,9 @@
   --popover: oklch(0.12 0.01 285.823);
   --popover-foreground: oklch(0.985 0 0);
   
-  /* Primary - Brighter orange for dark mode */
-  --primary: oklch(0.75 0.25 30); /* Brighter orange for contrast */
-  --primary-foreground: oklch(0.09 0.01 285.823); /* Dark text on orange */
+  /* Primary - Light yellow for dark mode */
+  --primary: oklch(0.85 0.18 75); /* Light yellow matching logo */
+  --primary-foreground: oklch(0.09 0.01 285.823); /* Dark text on light yellow */
   
   /* Secondary - Darker gray */
   --secondary: oklch(0.16 0.01 285.823);
@@ -116,19 +116,19 @@
   --muted: oklch(0.18 0.01 285.823);
   --muted-foreground: oklch(0.705 0.015 286.067);
   
-  /* Accent - Muted orange */
-  --accent: oklch(0.55 0.18 30); /* Muted orange for dark mode */
+  /* Accent - Light yellow */
+  --accent: oklch(0.75 0.15 75); /* Light yellow for dark mode */
   --accent-foreground: oklch(0.985 0 0);
   
   /* Destructive - Brighter red for dark mode */
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%); /* Subtle border */
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.75 0.25 30); /* Bright orange ring */
+  --ring: oklch(0.85 0.18 75); /* Light yellow ring */
   
   /* Chart colors - Dark theme */
-  --chart-1: oklch(0.75 0.25 30); /* Bright orange */
-  --chart-2: oklch(0.55 0.18 30); /* Muted orange */
+  --chart-1: oklch(0.85 0.18 75); /* Light yellow matching logo */
+  --chart-2: oklch(0.75 0.15 75); /* Light yellow matching logo */
   --chart-3: oklch(0.705 0.015 286.067); /* Gray */
   --chart-4: oklch(0.985 0 0); /* White */
   --chart-5: oklch(0.18 0.01 285.823); /* Dark muted */
@@ -136,12 +136,12 @@
   /* Sidebar colors - Dark theme */
   --sidebar: oklch(0.12 0.01 285.823);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.75 0.25 30); /* Bright orange */
+  --sidebar-primary: oklch(0.85 0.18 75); /* Light yellow matching logo */
   --sidebar-primary-foreground: oklch(0.09 0.01 285.823);
   --sidebar-accent: oklch(0.16 0.01 285.823);
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.75 0.25 30); /* Bright orange */
+  --sidebar-ring: oklch(0.85 0.18 75); /* Light yellow matching logo */
 }
 
 @layer base {
@@ -159,7 +159,7 @@
 @layer components {
   /* Pana-specific button styles */
   .btn-pana {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90 rounded-[var(--radius)] transition-all duration-200 shadow-sm hover:shadow-md;
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 rounded-(--radius) transition-all duration-200 shadow-sm hover:shadow-md;
   }
   
   /* Pana card with subtle border */

@@ -1,7 +1,6 @@
-import {NextConfig} from 'next';
-import createNextIntlPlugin from 'next-intl/plugin';
+  // This is the path to your i18n configuration
 
-const nextConfig: NextConfig = {};
+/** @type {import('next').NextConfig} */
+const nextConfig = {};
 
-const withNextIntl = createNextIntlPlugin();
-export default withNextIntl(nextConfig);
+module.exports = nextConfig;
