@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { ChevronLeft, ChevronRight, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react'
 import { useState } from 'react'
+import Image from 'next/image'
 
 type CustomEasing = [number, number, number, number]
 const easeOutCubic: CustomEasing = [0.215, 0.61, 0.355, 1]
@@ -120,7 +121,7 @@ export default function AboutTeam() {
             Our Team
           </Badge>
           
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-orange-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-primary to-orange-400 bg-clip-text text-transparent">
             Meet Our Team Member
           </h2>
           
@@ -183,10 +184,12 @@ export default function AboutTeam() {
                       {/* Team Member Image */}
                       <div className="relative">
                         <div className={`aspect-square ${member.bgColor} relative`}>
-                          <img
+                          <Image
                             src={member.image}
                             alt={member.name}
                             className="w-full h-full object-cover"
+                            width={300}
+                            height={300}
                           />
                         </div>
                         

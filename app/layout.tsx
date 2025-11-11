@@ -11,6 +11,9 @@ const inter = Inter({ subsets: ['latin', 'latin-ext'] })
 export const metadata: Metadata = {
   title: 'Pana Promotion PLC - Devoted to Quality',
   description: 'Leading printing and branding solutions in Ethiopia.',
+  icons: {
+    icon: '/pana-logo.png',
+  },
 }
 
 export default function RootLayout({

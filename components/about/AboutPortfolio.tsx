@@ -1,12 +1,11 @@
 // components/about/AboutPortfolio.tsx
 'use client'
 
-import { motion, useAnimation, useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
-import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { ChevronLeft, ChevronRight, Eye, ExternalLink } from 'lucide-react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 
 type CustomEasing = [number, number, number, number]
@@ -68,7 +67,6 @@ export default function AboutPortfolio() {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
   const containerRef = useRef(null)
   const isInView = useInView(containerRef, { once: false })
-  const controls = useAnimation()
 
   // Auto-scroll functionality
   useEffect(() => {
@@ -132,7 +130,7 @@ export default function AboutPortfolio() {
             Our Work
           </Badge>
           
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-orange-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-primary to-orange-400 bg-clip-text text-transparent">
             Create Stunning Print For Your Business
           </h2>
           
@@ -153,7 +151,7 @@ export default function AboutPortfolio() {
           <div className="relative">
             {/* Main Image Display */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white dark:bg-card">
-              <div className="aspect-video md:aspect-[16/10]">
+              <div className="aspect-video md:aspect-16/10">
                 <motion.div
                   key={currentIndex} // Key change to re-mount and animate
                   initial={{ opacity: 0, scale: 0.95 }}
@@ -172,7 +170,7 @@ export default function AboutPortfolio() {
               </div>
               
               {/* Image Overlay with Info */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 md:p-8">
+              <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-6 md:p-8">
                 <Badge className="mb-3 bg-primary/20 text-primary-foreground border-0">
                   {portfolioItems[currentIndex].category}
                 </Badge>
