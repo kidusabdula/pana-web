@@ -4,7 +4,6 @@
 import { motion } from 'framer-motion'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
 import Image from 'next/image'
 import { Calendar, Award, Users, Target } from 'lucide-react'
 
@@ -26,7 +25,7 @@ const fadeUp = {
 
 export default function AboutHero() {
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-br from-background to-secondary/40 py-16 md:py-24 lg:py-32">
+    <section className="relative w-full overflow-hidden bg-linear-to-br from-background to-secondary/40 py-16 md:py-24 lg:py-32">
       {/* Moving background gradient */}
       <motion.div
         animate={{
@@ -74,7 +73,7 @@ export default function AboutHero() {
               custom={0.3}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight"
             >
-              <span className="bg-gradient-to-r from-primary via-orange-400 to-primary/70 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-primary via-orange-400 to-primary/70 bg-clip-text text-transparent">
                 About Pana
               </span>
               <br />
@@ -162,9 +161,9 @@ export default function AboutHero() {
           >
             {/* Main Image */}
             <div className="relative">
-              <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+              <div className="aspect-4/5 rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/about-hero.jpg"
+                  src="/sample-1.jpg"
                   alt="Pana Promotion PLC Team"
                   fill
                   className="object-cover"
@@ -210,7 +209,7 @@ export default function AboutHero() {
             </div>
 
             {/* Decorative Elements */}
-            <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 via-transparent to-secondary/20 rounded-3xl blur-xl opacity-30 -z-10" />
+            <div className="absolute -inset-4 bg-linear-to-br from-primary/20 via-transparent to-secondary/20 rounded-3xl blur-xl opacity-30 -z-10" />
           </motion.div>
         </div>
       </div>
