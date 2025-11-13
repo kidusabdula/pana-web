@@ -1,7 +1,6 @@
-import type { NextConfig } from "next";
+  // This is the path to your i18n configuration
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+/** @type {import('next').NextConfig} */
+const nextConfig = {};
 
-export default nextConfig;
+module.exports = nextConfig;
