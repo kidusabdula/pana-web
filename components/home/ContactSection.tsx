@@ -24,7 +24,11 @@ const fadeUp = {
 }
 
 export default function ContactSection() {
-  const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.755234278766!2d38.76385997569948!3d9.022299988123697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85e2f8b0a7a5%3A0x6e2bce2e57b4d8c8!2sHayahulet%20Rd%2C%20Addis%20Ababa!5e0!3m2!1sen!2set!4v1700000000000!5m2!1sen!2set"
+  // Use the exact address string to let Google Maps place the pin precisely
+  const address = 'Hayahulet Rd. Infront of Worku Bld, Wakero Bld., Addis Ababa, Ethiopia'
+  const encodedAddress = encodeURIComponent(address)
+  const mapUrl = `https://maps.google.com/maps?q=${encodedAddress}&t=&z=19&ie=UTF8&iwloc=A&output=embed`
+  const googleMapsLink = 'https://maps.app.goo.gl/iC6CNfmJ24EeeTBt8'
 
   const businessHours = [
     { day: "Monday - Friday", hours: "8:30 AM - 6:00 PM", icon: Clock, status: "open", description: "Full services available" },
@@ -179,7 +183,7 @@ export default function ContactSection() {
             {/* Google Maps Integration */}
             <Card className="shadow-2xl overflow-hidden bg-background/80 backdrop-blur-md border border-primary/10">
               <CardContent className="p-0">
-                <div className="aspect-video w-full">
+                <div className="aspect-video w-full relative">
                   <iframe
                     src={mapUrl}
                     width="100%"
@@ -188,7 +192,15 @@ export default function ContactSection() {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    className="w-full h-full"
+                    className="w-full h-full pointer-events-none"
+                  />
+                  {/* Click-through overlay to open Google Maps directions */}
+                  <a
+                    href={googleMapsLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open Google Maps directions"
+                    className="absolute inset-0"
                   />
                 </div>
                 <div className="p-6 bg-linear-to-r from-primary/5 to-orange-400/5">
@@ -219,8 +231,8 @@ export default function ContactSection() {
                       Hayahulet Rd. Infront of Worku Bld, Wakero Bld.<br />
                       Addis Ababa, Ethiopia
                     </p>
-                    <Button variant="link" className="p-0 h-auto text-primary mt-2 font-medium">
-                      Get Directions →
+                    <Button asChild variant="link" className="p-0 h-auto text-primary mt-2 font-medium">
+                      <a href={googleMapsLink} target="_blank" rel="noopener noreferrer">Get Directions →</a>
                     </Button>
                   </div>
                 </CardContent>
