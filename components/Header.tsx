@@ -124,6 +124,14 @@ export default function Header() {
                                 <div className="text-sm font-medium leading-none">{subItem.title}</div>
                               </NavigationMenuLink>
                             ))}
+                            <NavigationMenuLink
+                              href="/services"
+                              className="col-span-2 rounded-md p-0"
+                            >
+                              <Button className="btn-pana w-full rounded-lg">
+                                Explore All Services
+                              </Button>
+                            </NavigationMenuLink>
                           </motion.div>
                         </NavigationMenuContent>
                       </>
