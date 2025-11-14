@@ -1,0 +1,13 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/_not-found/page.js")
+R.c("server/chunks/ssr/Documents_GitHub_pana-web_0eb87c34._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__ecf09555._.js")
+R.c("server/chunks/ssr/51a83_next_dist_esm_build_templates_app-page_cd554a57.js")
+R.c("server/chunks/ssr/[root-of-the-server]__756f04e1._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__712a335e._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__71f49b88._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__ee2e3bb4._.js")
+R.c("server/chunks/ssr/51a83_next_dist_client_components_35e4d45f._.js")
+R.c("server/chunks/ssr/51a83_next_dist_client_components_builtin_forbidden_bfa8ba3a.js")
+R.c("server/chunks/ssr/80b94_GitHub_pana-web__next-internal_server_app__not-found_page_actions_ce623115.js")
+R.m(25600)
+module.exports=R.m(25600).exports

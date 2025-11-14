@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/caleb_8h6kswm/Documents/GitHub/pana-web/app/page.tsx"],"sourcesContent":["// app/page.tsx\r\nimport { redirect } from 'next/navigation'\r\n\r\nexport default function HomePage() {\r\n  redirect('/home')\r\n}"],"names":[],"mappings":"AAAA,eAAe;;;;;AACf;AAAA;;AAEe,SAAS;IACtB,IAAA,uOAAQ,EAAC;AACX","debugId":null}}]
+}

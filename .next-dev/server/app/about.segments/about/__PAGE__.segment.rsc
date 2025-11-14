@@ -1,0 +1,10 @@
+1:"$Sreact.fragment"
+2:I[83756,["/_next/static/chunks/24f8c53b3b7a4225.js","/_next/static/chunks/28d60a78ec059712.js","/_next/static/chunks/27e50e50de79d59f.js","/_next/static/chunks/1fe1cd1419ac1f7b.js","/_next/static/chunks/510feebceb52cf26.js","/_next/static/chunks/2ee1c576e767db79.js"],"default"]
+3:I[87106,["/_next/static/chunks/24f8c53b3b7a4225.js","/_next/static/chunks/28d60a78ec059712.js","/_next/static/chunks/27e50e50de79d59f.js","/_next/static/chunks/1fe1cd1419ac1f7b.js","/_next/static/chunks/510feebceb52cf26.js","/_next/static/chunks/2ee1c576e767db79.js"],"default"]
+4:I[38198,["/_next/static/chunks/24f8c53b3b7a4225.js","/_next/static/chunks/28d60a78ec059712.js","/_next/static/chunks/27e50e50de79d59f.js","/_next/static/chunks/1fe1cd1419ac1f7b.js","/_next/static/chunks/510feebceb52cf26.js","/_next/static/chunks/2ee1c576e767db79.js"],"default"]
+5:I[33260,["/_next/static/chunks/24f8c53b3b7a4225.js","/_next/static/chunks/28d60a78ec059712.js","/_next/static/chunks/27e50e50de79d59f.js","/_next/static/chunks/1fe1cd1419ac1f7b.js","/_next/static/chunks/510feebceb52cf26.js","/_next/static/chunks/2ee1c576e767db79.js"],"default"]
+6:I[75890,["/_next/static/chunks/24f8c53b3b7a4225.js","/_next/static/chunks/28d60a78ec059712.js","/_next/static/chunks/27e50e50de79d59f.js","/_next/static/chunks/1fe1cd1419ac1f7b.js","/_next/static/chunks/510feebceb52cf26.js","/_next/static/chunks/2ee1c576e767db79.js"],"default"]
+7:I[91744,["/_next/static/chunks/5d1d358be1b1024d.js","/_next/static/chunks/046cb07d1176f01a.js"],"OutletBoundary"]
+8:"$Sreact.suspense"
+0:{"buildId":"2IeH5nMfVVGWjFOp4fqjV","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"min-h-screen","children":[["$","$L2",null,{}],["$","$L3",null,{}],["$","$L4",null,{}],["$","$L5",null,{}],["$","$L6",null,{}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/510feebceb52cf26.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/2ee1c576e767db79.js","async":true}]],["$","$L7",null,{"children":["$","$8",null,{"name":"Next.MetadataOutlet","children":"$@9"}]}]]}],"loading":null,"isPartial":false}
+9:null
