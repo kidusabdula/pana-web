@@ -802,3 +802,5 @@ Import trace:
   Server Component:
     ./Documents/GitHub/pana-web/components/Header.tsx
     ./Documents/GitHub/pana-web/app/layout.tsx
+[24:33:07.257] Server  LOG      ✓ Compiled in 645ms
+[24:35:57.543] Server  LOG      ✓ Compiled in 349ms

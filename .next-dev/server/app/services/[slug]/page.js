@@ -1,5 +1,5 @@
 var R=require("../../../chunks/ssr/[turbopack]_runtime.js")("server/app/services/[slug]/page.js")
-R.c("server/chunks/ssr/Documents_GitHub_pana-web_fdc21e1b._.js")
+R.c("server/chunks/ssr/Documents_GitHub_pana-web_10da990d._.js")
 R.c("server/chunks/ssr/Documents_GitHub_pana-web_28fcc9f6._.js")
 R.c("server/chunks/ssr/[root-of-the-server]__ecf09555._.js")
 R.c("server/chunks/ssr/51a83_next_dist_ff3c1520._.js")
