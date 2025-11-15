@@ -1,34 +1,31 @@
-import { notFound } from "next/navigation";
-import DigitalPrint from "@/components/services/DigitalPrint";
-import Signage from "@/components/services/Signage";
-import FlexBanner from "@/components/services/FlexBanner";
-import Vinyl from "@/components/services/Vinyl";
-import Fabric from "@/components/services/Fabric";
-import Promotional from "@/components/services/Promotional";
-import Design from "@/components/services/Design";
-import Events from "@/components/services/Events";
+import { Metadata } from "next";
+import { redirect } from "next/navigation";
+import ServiceLayout from "@/components/services/ui/ServiceLayout";
+import { services } from "../../../lib/services-data";
+import type { ServiceSpec } from "@/types/service";
 
-const servicesMap = {
-  "digital-print": DigitalPrint,
-  signage: Signage,
-  "flex-banner": FlexBanner,
-  vinyl: Vinyl,
-  fabric: Fabric,
-  promotional: Promotional,
-  design: Design,
-  events: Events,
-} as const;
-
-export function generateStaticParams() {
-  return Object.keys(servicesMap).map((slug) => ({ slug }));
+export async function generateStaticParams() {
+  return services.map((s) => ({ slug: s.slug }));
 }
 
-export default function ServiceDetailPage({
-  params,
-}: {
-  params: { slug: keyof typeof servicesMap | string };
-}) {
-  const ServiceComponent = servicesMap[params.slug as keyof typeof servicesMap];
-  if (!ServiceComponent) return notFound();
-  return <ServiceComponent />;
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const slug = decodeURIComponent(params.slug).replace(/^\/+|\/+$/g, "");
+  const service = services.find((s) => s.slug === slug) ?? services[0];
+  return {
+    title: `${service.title} | PANA`,
+    description: service.subtitle ?? service.description?.replace(/<[^>]*>?/gm, "").slice(0, 160),
+    openGraph: {
+      title: `${service.title} | PANA`,
+      description: service.subtitle ?? undefined,
+      images: service.images?.length ? [{ url: service.images[0].src }] : undefined,
+    },
+  };
+}
+
+export default function ServicePage({ params }: { params: { slug: string } }) {
+  const slug = decodeURIComponent(params.slug).replace(/^\/+|\/+$/g, "");
+  const service = services.find((s) => s.slug === slug) ?? services[0];
+
+  // No redirect fallback; we will render with a default service when unmatched
+  return <ServiceLayout service={service} />;
 }
