@@ -46,12 +46,13 @@ const navigationItems = [
 
 export default function Header() {
   const { theme, setTheme } = useTheme()
-  const [mounted] = useState(true)
+  const [mounted, setMounted] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    
+    setMounted(true)
+
     const handleScroll = () => {
       const isScrolled = window.scrollY > 20
       setScrolled(isScrolled)
@@ -63,8 +64,6 @@ export default function Header() {
 
   const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark')
 
-  if (!mounted) return null
-
   return (
     <>
       {/* Top Header */}
@@ -72,7 +71,7 @@ export default function Header() {
       
       {/* Main Header */}
       <motion.header
-        initial={{ opacity: 0, y: -20 }}
+        initial={false}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
         className={`sticky top-0 z-50 w-full transition-all duration-300 ${
@@ -110,7 +109,7 @@ export default function Header() {
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
                           <motion.div
-                            initial={{ opacity: 0, y: -10 }}
+                            initial={false}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.2 }}
                             className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]"
@@ -119,9 +118,9 @@ export default function Header() {
                               <NavigationMenuLink
                                 key={subItem.title}
                                 href={subItem.href}
-                                className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                                className="rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
                               >
-                                <div className="text-sm font-medium leading-none">{subItem.title}</div>
+                                {subItem.title}
                               </NavigationMenuLink>
                             ))}
                             <NavigationMenuLink
@@ -156,11 +155,17 @@ export default function Header() {
                 size="icon"
                 onClick={toggleTheme}
                 className="hidden sm:flex"
+                aria-label="Toggle theme"
               >
-                {theme === 'dark' ? (
-                  <Sun className="h-4 w-4" />
+                {mounted ? (
+                  theme === 'dark' ? (
+                    <Sun className="h-4 w-4" />
+                  ) : (
+                    <Moon className="h-4 w-4" />
+                  )
                 ) : (
-                  <Moon className="h-4 w-4" />
+                  // Placeholder to keep markup stable during hydration
+                  <Sun className="h-4 w-4 opacity-0" aria-hidden />
                 )}
               </Button>
 
@@ -178,6 +183,7 @@ export default function Header() {
                 size="icon"
                 className="lg:hidden"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                aria-label="Toggle menu"
               >
                 {mobileMenuOpen ? (
                   <X className="h-5 w-5" />
@@ -192,7 +198,7 @@ export default function Header() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
+            initial={false}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
@@ -210,7 +216,7 @@ export default function Header() {
                       {item.title}
                     </Link>
                     {item.submenu && (
-                      <div className="ml-4 mt-2 space-y-2">
+                      <div className="ml-4 mt-2 space-y-1">
                         {item.submenu.map((subItem) => (
                           <Link
                             key={subItem.title}
@@ -232,10 +238,14 @@ export default function Header() {
                     size="sm"
                     onClick={toggleTheme}
                   >
-                    {theme === 'dark' ? (
-                      <Sun className="h-4 w-4 mr-2" />
+                    {mounted ? (
+                      theme === 'dark' ? (
+                        <Sun className="h-4 w-4 mr-2" />
+                      ) : (
+                        <Moon className="h-4 w-4 mr-2" />
+                      )
                     ) : (
-                      <Moon className="h-4 w-4 mr-2" />
+                      <Sun className="h-4 w-4 mr-2 opacity-0" aria-hidden />
                     )}
                     Theme
                   </Button>
