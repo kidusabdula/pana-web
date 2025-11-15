@@ -7,7 +7,7 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 export default function TopHeader() {
   return (
     <motion.div
-      initial={{ opacity: 0, y: -20 }}
+      initial={false}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className="bg-linear-to-r from-primary/10 to-secondary/10 border-b border-border/30"
