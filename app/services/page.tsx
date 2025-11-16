@@ -152,7 +152,10 @@ export default function ServicesPage() {
                 End-to-end printing, signage, events, and design solutions—crafted for clarity, impact, and brand consistency.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-10">
-                <Button size="lg" className="btn-pana">
+                <Button size="lg" className="btn-pana" onClick={() => {
+                  const el = document.getElementById('services-grid');
+                  el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }}>
                   Explore All Services
                 </Button>
                 <Button size="lg" variant="outline">
@@ -195,7 +198,7 @@ export default function ServicesPage() {
       <div className="divider-pana my-16" />
 
       {/* SERVICES GRID – MODERN ASYMMETRIC LAYOUT */}
-      <section className="py-20 lg:py-28 bg-background">
+      <section id="services-grid" className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0 }}
@@ -215,7 +218,7 @@ export default function ServicesPage() {
             variants={container}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: '0px 0px -100px 0px' }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8"
           >
             {services.map((service) => {
@@ -224,7 +227,7 @@ export default function ServicesPage() {
                 <motion.div
                   key={service.id}
                   variants={item}
-                  whileHover={{ y: -8, transition: { duration: 0.3 } }}
+                  whileHover={{ y: -8, scale: 1.02, transition: { duration: 0.25 } }}
                   className="group"
                 >
                   <Link href={`/services/${service.slug}`} className="block">
