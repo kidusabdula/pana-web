@@ -22,6 +22,7 @@ import {
 import { cn } from '@/lib/utils';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 const services = [
@@ -130,34 +131,64 @@ export default function ServicesPage() {
 
   return (
     <>
-      {/* HERO SECTION */}
-      <section className="relative overflow-hidden bg-linear-to-br from-primary/5 via-background to-secondary/5 py-24 lg:py-32">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,oklch(var(--primary)/0.05),transparent_50%)]" />
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto text-center"
-          >
-            <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
-              Devoted to Quality Since 2016
-            </Badge>
-            <h1 className="text-5xl lg:text-7xl font-bold bg-linear-to-r from-primary via-primary to-accent bg-clip-text text-transparent mb-6">
-              Our Services
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              End-to-end printing, branding, and promotional solutions that empower your message with creativity, precision, and impact.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-              <Button size="lg" className="btn-pana">
-                Explore All Services
-              </Button>
-              <Button size="lg" variant="outline">
-                Get a Quote
-              </Button>
-            </div>
-          </motion.div>
+      {/* HERO SECTION – Split layout with motion image */}
+      <section className="relative bg-linear-to-br from-primary/5 via-background to-secondary/5 py-20 lg:py-28">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            {/* Left: Text content */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="order-2 lg:order-1"
+            >
+              <Badge className="mb-4 bg-primary/15 text-primary border-primary/25">
+                Devoted to Quality Since 2016
+              </Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+                Our Services
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
+                End-to-end printing, signage, events, and design solutions—crafted for clarity, impact, and brand consistency.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 mt-10">
+                <Button size="lg" className="btn-pana">
+                  Explore All Services
+                </Button>
+                <Button size="lg" variant="outline">
+                  Get a Quote
+                </Button>
+              </div>
+            </motion.div>
+
+            {/* Right: Motion image card */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="order-1 lg:order-2"
+            >
+              <motion.div
+                animate={{ y: [0, -18, 0], scale: [1, 1.04, 1] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="relative rounded-3xl overflow-hidden shadow-2xl ring-1 ring-primary/20"
+              >
+                <motion.div
+                  animate={{ opacity: [0.85, 1, 0.85] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,oklch(var(--primary)/0.20),transparent_60%)]"
+                />
+                <Image
+                  src="/ourserviceBG.jpg"
+                  alt="Pana services showcase"
+                  width={1400}
+                  height={900}
+                  priority
+                  className="w-full h-auto object-cover"
+                />
+              </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
