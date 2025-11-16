@@ -22,6 +22,7 @@ const IconMap: Record<string, any> = {
 export default function ServiceHero({ service }: { service: ServiceSpec }) {
   const Icon = IconMap[service.slug] || Printer;
   const isVinyl = service.slug === "vinyl";
+  const isSignage = service.slug === "signage";
 
   return (
     <motion.div initial="initial" animate="animate" variants={fadeUp}>
@@ -42,37 +43,57 @@ export default function ServiceHero({ service }: { service: ServiceSpec }) {
           transition={{ duration: 0.6 }}
         >
           <div className="aspect-video relative">
-            {/* Primary image */}
-            <Image
-              src={service.images[0].src}
-              alt={service.images[0].alt}
-              fill
-              priority
-              className={
-                cn(
-                  "object-cover transition ease-in-out duration-300 group-hover:scale-110 opacity-100 group-hover:opacity-0",
-                  isVinyl && "saturate-125 contrast-110"
-                )
-              }
-            />
-            {/* Hover image (falls back to primary if not provided) */}
-            <Image
-              src={
-                service.slug === "signage"
-                  ? "/outdoorsinage.jpg"
-                  : service.images?.[1]?.src || service.images[0].src
-              }
-              alt={service.images?.[1]?.alt || service.images[0].alt}
-              fill
-              className={
-                cn(
-                  "object-cover transition ease-in-out duration-300 group-hover:scale-110 opacity-0 group-hover:opacity-100",
-                  isVinyl && "saturate-125 contrast-110"
-                )
-              }
-            />
+            {isSignage ? (
+              <>
+                {/* Default hero image */}
+                <Image
+                  src={service.images[0].src}
+                  alt={service.images[0].alt}
+                  fill
+                  priority
+                  className={cn(
+                    "object-cover transition-transform duration-1000 group-hover:scale-110",
+                    "transition-opacity duration-500 opacity-100 group-hover:opacity-0"
+                  )}
+                />
+                {/* Hover replacement image from public/ */}
+                <Image
+                  src={"/outdoorsinage.jpg"}
+                  alt={"Outdoor signage installation with bold branding"}
+                  fill
+                  priority
+                  className={cn(
+                    "object-cover absolute inset-0 transition-transform duration-1000 group-hover:scale-110",
+                    "transition-opacity duration-500 opacity-0 group-hover:opacity-100"
+                  )}
+                />
+              </>
+            ) : (
+              <Image
+                src={service.images[0].src}
+                alt={service.images[0].alt}
+                fill
+                priority
+                className={
+                  cn(
+                    "object-cover transition-transform duration-1000 group-hover:scale-110",
+                    isVinyl && "saturate-125 contrast-110"
+                  )
+                }
+              />
+            )}
+
             {/* Base vignette */}
             <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent" />
+
+            {/* Signage-specific subtle cool-neutral overlay */}
+            {isSignage && (
+              <>
+                <div className="absolute inset-0 bg-linear-to-br from-cyan-300/10 via-transparent to-blue-300/10 mix-blend-multiply" />
+                <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.35)_0%,transparent_60%)]" />
+              </>
+            )}
+
             {/* Vinyl-specific modern overlays */}
             {isVinyl && (
               <>

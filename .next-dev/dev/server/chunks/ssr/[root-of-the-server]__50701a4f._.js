@@ -134,8 +134,8 @@ const services = [
                 alt: 'Emergency exit sign on yellow brick wall'
             },
             {
-                src: '/outdoorsinage.jpg',
-                alt: 'Outdoor signage installation with bold branding'
+                src: '/sample-5.png',
+                alt: 'Wayfinding signs in a venue'
             },
             {
                 src: '/sample-3.jpeg',

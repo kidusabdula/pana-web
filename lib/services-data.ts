@@ -41,7 +41,7 @@ export const services: ServiceSpec[] = [
     features: ['Illuminated and non-illuminated options', 'CNC / laser-cut letters and shapes', 'Weatherproof, long-lasting materials', 'Professional installation'],
     images: [
       { src: '/indoorsinage.jpg', alt: 'Emergency exit sign on yellow brick wall' },
-      { src: '/outdoorsinage.jpg', alt: 'Outdoor signage installation with bold branding' },
+      { src: '/sample-5.png', alt: 'Wayfinding signs in a venue' },
       { src: '/sample-3.jpeg', alt: 'Promotional signage wall' },
     ],
     options: {
