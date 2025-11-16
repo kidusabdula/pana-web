@@ -4,16 +4,18 @@ export const services: ServiceSpec[] = [
   {
     slug: 'digital-print',
     title: 'Digital Paper Print Solutions',
-    subtitle: 'Vivid. Crisp. Fast. Your message, perfectly printed.',
-    description: 'We deliver high-quality printing for brochures, flyers, business cards, posters, booklets, magazines, labels, stickers, calendars, and more. 1200 DPI clarity, vibrant CMYK colors, and same-day turnaround on most jobs.',
+    subtitle: 'Precision printing that elevates your brand.',
+    description:
+      '<p>Bring ideas to life with production-grade digital printing built for clarity, speed, and consistency. From business cards and brochures to reports and marketing kits, we deliver polished results that represent your brand at its best.</p>' +
+      '<p>Expect ultrafine detail, color-accurate output, and flexible finishing — all handled in-house for reliable quality and quick turnaround.</p>',
     features: [
-      '1200 DPI precision',
-      'Full CMYK + Pantone matching',
-      'Same-day rush available',
-      'Eco paper options',
-      'In-house binding & lamination',
+      'Ultrafine 1200 DPI detail',
+      'Color-accurate CMYK + Pantone support',
+      'Same-day and rush options',
+      'Premium papers and finishes',
+      'In-house binding, lamination, and kitting',
     ],
-    equipment: 'Konica Minolta AccurioPress, Industrial Binders, Roll Laminators',
+    equipment: 'Konica Minolta AccurioPress series, Duplo binders, cold/hot laminators',
     images: [
       { src: '/sample-1.jpg', alt: 'Brochure stack with vibrant colors' },
       { src: '/sample-2.jpg', alt: 'Business card close-up' },
@@ -32,9 +34,11 @@ export const services: ServiceSpec[] = [
   {
     slug: 'signage',
     title: 'Indoor & Outdoor Signage',
-    subtitle: 'Durable, high-impact signs for storefronts, venues, and campaigns.',
-    description: 'Signs engineered to endure and impress. From storefronts to wayfinding, fabricated for clarity and brand impact.',
-    features: ['Weather-resistant materials', 'Vivid UV inks', 'Custom shapes & sizes', 'Professional installation'],
+    subtitle: 'Make a statement that lasts.',
+    description:
+      '<p>Command attention with signage engineered for impact and durability. Whether storefronts, wayfinding, or large-scale promotional displays, we craft solutions that are bold, legible, and built to withstand the elements.</p>' +
+      '<p>From illumination to precision-cut lettering, every piece is produced and finished to professional standards.</p>',
+    features: ['Illuminated and non-illuminated options', 'CNC / laser-cut letters and shapes', 'Weatherproof, long-lasting materials', 'Professional installation'],
     images: [
       { src: '/sample-2.jpg', alt: 'Storefront signage with bold branding' },
       { src: '/sample-5.png', alt: 'Wayfinding signs in a venue' },
@@ -52,9 +56,11 @@ export const services: ServiceSpec[] = [
   {
     slug: 'flex-banner',
     title: 'Flex Banners',
-    subtitle: 'High-visibility banners for outdoor advertising and events.',
-    description: 'Strong, vibrant banners built to last in the elements. Ideal for promotions and event branding.',
-    features: ['Weather-resistant flex material', 'Reinforced hems & eyelets', 'Large-format printing'],
+    subtitle: 'Big, bold, and built to perform.',
+    description:
+      '<p>High-visibility flex banners designed for outdoor campaigns, events, and retail activations. Vivid color, reinforced edges, and reliable hardware make setup simple and performance dependable.</p>' +
+      '<p>Scale up your message with large-format capabilities and durable materials that stand up to real-world use.</p>',
+    features: ['UV-stable inks', 'Reinforced hems & eyelets', 'Large-format up to 3.2m width'],
     images: [
       { src: '/sample-1.jpg', alt: 'Outdoor flex banner on building' },
       { src: '/sample-2.jpg', alt: 'Event banner with crowd' },
@@ -71,9 +77,11 @@ export const services: ServiceSpec[] = [
   {
     slug: 'vinyl',
     title: 'Vinyl Printing & Cutting',
-    subtitle: 'Decals, vehicle wraps, and window graphics that stick and shine.',
-    description: 'Precision-cut vinyl with durable adhesives for long-lasting applications across vehicles, windows, and products.',
-    features: ['Precision plotter cutting', 'High-tack adhesives', 'Outdoor-grade durability'],
+    subtitle: 'Turn surfaces into brand moments.',
+    description:
+      '<p>From vehicles to windows and walls, vinyl branding delivers high-impact visuals with precision-cut details and long-lasting adhesion.</p>' +
+      '<p>Perfect for wraps, decals, and custom cutouts — all produced for durability and clean installation.</p>',
+    features: ['Precision plotter cutting', 'High-tack, long-life adhesives', 'Vehicle, window, and wall applications'],
     images: [
       { src: '/sample-4.png', alt: 'Vehicle wrap in progress' },
       { src: '/sample-2.jpg', alt: 'Window graphics on storefront' },
@@ -90,9 +98,11 @@ export const services: ServiceSpec[] = [
   {
     slug: 'fabric',
     title: 'Fabric Printing',
-    subtitle: 'Soft signage, flags, and tension displays with premium fabric.',
-    description: 'Lightweight, wrinkle-resistant fabric prints with rich color for indoor and outdoor setups.',
-    features: ['Dye-sublimation printing', 'Wrinkle-resistant', 'Easy to transport'],
+    subtitle: 'Soft signage that moves with your audience.',
+    description:
+      '<p>Premium fabric graphics with rich, dye-sublimated color for flags, tension frames, and event backdrops. Lightweight, wrinkle-resistant, and easy to transport.</p>' +
+      '<p>Ideal for indoor environments and outdoor setups where texture and elegance matter.</p>',
+    features: ['Dye-sublimation printing', 'Wrinkle-resistant, soft-touch output', 'Portable and event-ready'],
     images: [
       { src: '/sample-3.jpeg', alt: 'Fabric tension display' },
       { src: '/sample-1.jpg', alt: 'Flags at an event' },
@@ -109,9 +119,10 @@ export const services: ServiceSpec[] = [
   {
     slug: 'promotional',
     title: 'Promotional Merchandise',
-    subtitle: 'Branded giveaways and merch that people keep and love.',
-    description: 'High-quality promotional items for campaigns and events.',
-    features: ['Wide range of products', 'Durable branding', 'Bulk pricing'],
+    subtitle: 'Merch people actually keep.',
+    description:
+      '<p>Amplify brand recall with high-quality promotional items for campaigns, launches, and events. From apparel and drinkware to stationery and gifts, we curate and brand products that feel premium and purposeful.</p>',
+    features: ['Wide product range', 'Heat transfer, screen print, embroidery', 'Bulk-friendly pricing'],
     images: [
       { src: '/sample-5.png', alt: 'Promo items assortment' },
       { src: '/sample-2.jpg', alt: 'Branded tote bags' },
@@ -128,9 +139,10 @@ export const services: ServiceSpec[] = [
   {
     slug: 'design',
     title: 'Creative Design Services',
-    subtitle: 'Brand identity, campaign concepts, and production-ready assets.',
-    description: 'Compelling visuals aligned with your goals. Includes brand kits, layouts, and print-ready files.',
-    features: ['Brand identity', 'Campaign design', 'Print-ready assets'],
+    subtitle: 'From strategy to pixel-perfect execution.',
+    description:
+      '<p>Partner with a creative team that aligns design to outcomes. We develop brand identities, campaign visuals, and production-ready assets that look great and work hard across print and digital.</p>',
+    features: ['Logo & identity systems', 'Campaign and marketing visuals', 'Print-ready and digital templates'],
     images: [
       { src: '/sample-1.jpg', alt: 'Design moodboard' },
       { src: '/sample-3.jpeg', alt: 'Layout design preview' },
@@ -143,9 +155,10 @@ export const services: ServiceSpec[] = [
   {
     slug: 'events',
     title: 'Event Branding & Production',
-    subtitle: 'End-to-end event branding, signage, and on-site support.',
-    description: 'Make events memorable with cohesive branding, signage, and production support.',
-    features: ['Booth branding', 'Directional signage', 'On-site support'],
+    subtitle: 'End-to-end branding and on-site support.',
+    description:
+      '<p>Make events memorable with cohesive branding, signage, and production support. From concept to execution, we handle booths, backdrops, directional systems, and attendee materials for a seamless experience.</p>',
+    features: ['Booths & stands', 'Backdrops & stages', 'Directional signage', 'Attendee kits', 'On-site production support'],
     images: [
       { src: '/sample-2.jpg', alt: 'Event booth branding' },
       { src: '/sample-3.jpeg', alt: 'Venue signage' },
