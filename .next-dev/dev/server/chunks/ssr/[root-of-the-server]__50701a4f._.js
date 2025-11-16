@@ -130,12 +130,12 @@ const services = [
         ],
         images: [
             {
-                src: '/sample-2.jpg',
-                alt: 'Storefront signage with bold branding'
+                src: '/indoorsinage.jpg',
+                alt: 'Emergency exit sign on yellow brick wall'
             },
             {
-                src: '/sample-5.png',
-                alt: 'Wayfinding signs in a venue'
+                src: '/outdoorsinage.jpg',
+                alt: 'Outdoor signage installation with bold branding'
             },
             {
                 src: '/sample-3.jpeg',
@@ -228,8 +228,8 @@ const services = [
         ],
         images: [
             {
-                src: '/sample-4.png',
-                alt: 'Vehicle wrap in progress'
+                src: '/vinlyprinting.png',
+                alt: 'Modern green exhibition panels with silver frame'
             },
             {
                 src: '/sample-2.jpg',

@@ -40,8 +40,8 @@ export const services: ServiceSpec[] = [
       '<p>From illumination to precision-cut lettering, every piece is produced and finished to professional standards.</p>',
     features: ['Illuminated and non-illuminated options', 'CNC / laser-cut letters and shapes', 'Weatherproof, long-lasting materials', 'Professional installation'],
     images: [
-      { src: '/sample-2.jpg', alt: 'Storefront signage with bold branding' },
-      { src: '/sample-5.png', alt: 'Wayfinding signs in a venue' },
+      { src: '/indoorsinage.jpg', alt: 'Emergency exit sign on yellow brick wall' },
+      { src: '/outdoorsinage.jpg', alt: 'Outdoor signage installation with bold branding' },
       { src: '/sample-3.jpeg', alt: 'Promotional signage wall' },
     ],
     options: {
@@ -75,26 +75,26 @@ export const services: ServiceSpec[] = [
     basePrice: 3.5,
   },
   {
-    slug: 'vinyl',
-    title: 'Vinyl Printing & Cutting',
-    subtitle: 'Turn surfaces into brand moments.',
-    description:
-      '<p>From vehicles to windows and walls, vinyl branding delivers high-impact visuals with precision-cut details and long-lasting adhesion.</p>' +
-      '<p>Perfect for wraps, decals, and custom cutouts — all produced for durability and clean installation.</p>',
-    features: ['Precision plotter cutting', 'High-tack, long-life adhesives', 'Vehicle, window, and wall applications'],
-    images: [
-      { src: '/sample-4.png', alt: 'Vehicle wrap in progress' },
-      { src: '/sample-2.jpg', alt: 'Window graphics on storefront' },
-    ],
-    options: {
-      sizes: ['S', 'M', 'L', 'Custom'],
-      materials: ['Gloss Vinyl', 'Matte Vinyl', 'Clear Vinyl'],
-      finishes: ['None', 'Laminate'],
-      colors: ['Full Color', 'Spot Color'],
-      sides: ['Single-Sided'],
-    },
-    basePrice: 1.2,
-  },
+     slug: 'vinyl',
+     title: 'Vinyl Printing & Cutting',
+     subtitle: 'Turn surfaces into brand moments.',
+     description:
+       '<p>From vehicles to windows and walls, vinyl branding delivers high-impact visuals with precision-cut details and long-lasting adhesion.</p>' +
+       '<p>Perfect for wraps, decals, and custom cutouts — all produced for durability and clean installation.</p>',
+     features: ['Precision plotter cutting', 'High-tack, long-life adhesives', 'Vehicle, window, and wall applications'],
+     images: [
+       { src: '/vinlyprinting.png', alt: 'Modern green exhibition panels with silver frame' },
+       { src: '/sample-2.jpg', alt: 'Window graphics on storefront' },
+     ],
+     options: {
+       sizes: ['S', 'M', 'L', 'Custom'],
+       materials: ['Gloss Vinyl', 'Matte Vinyl', 'Clear Vinyl'],
+       finishes: ['None', 'Laminate'],
+       colors: ['Full Color', 'Spot Color'],
+       sides: ['Single-Sided'],
+     },
+     basePrice: 1.2,
+   },
   {
     slug: 'fabric',
     title: 'Fabric Printing',
