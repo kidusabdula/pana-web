@@ -1,0 +1,1 @@
+{"version":3,"sources":["turbopack:///[project]/app/blog/page.tsx"],"sourcesContent":["\r\nexport default function BlogPage() {\r\n  return (\r\n    <div>\r\n      <h1>Blog</h1>\r\n    </div>\r\n  )\r\n}"],"names":[],"mappings":"8LACe,SAAS,IACtB,MACE,CAAA,EAAA,EAAA,GAAA,EAAC,MAAA,UACC,CAAA,EAAA,EAAA,GAAA,EAAC,KAAA,UAAG,UAGV"}

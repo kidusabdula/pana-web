@@ -11,6 +11,54 @@
       "priority": true,
       "statusCode": 308,
       "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    },
+    {
+      "source": "/services/digital-paper-print-solutions",
+      "destination": "/services/digital-print",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/services/digital-paper-print-solutions(?:/)?$"
+    },
+    {
+      "source": "/services/indoor-outdoor-signage",
+      "destination": "/services/signage",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/services/indoor-outdoor-signage(?:/)?$"
+    },
+    {
+      "source": "/services/flex-banners",
+      "destination": "/services/flex-banner",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/services/flex-banners(?:/)?$"
+    },
+    {
+      "source": "/services/vinyl-graphics",
+      "destination": "/services/vinyl",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/services/vinyl-graphics(?:/)?$"
+    },
+    {
+      "source": "/services/fabric-printing",
+      "destination": "/services/fabric",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/services/fabric-printing(?:/)?$"
+    },
+    {
+      "source": "/services/promotional-items",
+      "destination": "/services/promotional",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/services/promotional-items(?:/)?$"
+    },
+    {
+      "source": "/services/creative-design",
+      "destination": "/services/design",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/services/creative-design(?:/)?$"
+    },
+    {
+      "source": "/services/event-services",
+      "destination": "/services/events",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/services/event-services(?:/)?$"
     }
   ],
   "headers": [],

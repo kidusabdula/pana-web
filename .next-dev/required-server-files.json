@@ -99,7 +99,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\caleb_8h6kswm",
+    "outputFileTracingRoot": "C:\\Users\\caleb_8h6kswm\\Documents\\GitHub\\pana-web",
     "cacheComponents": false,
     "cacheLife": {
       "default": {
@@ -290,12 +290,54 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
     "turbopack": {
-      "root": "C:\\Users\\caleb_8h6kswm"
+      "root": "C:\\Users\\caleb_8h6kswm\\Documents\\GitHub\\pana-web"
     },
-    "distDirRoot": ".next-dev"
+    "distDirRoot": ".next-dev",
+    "_originalRedirects": [
+      {
+        "source": "/services/digital-paper-print-solutions",
+        "destination": "/services/digital-print",
+        "permanent": true
+      },
+      {
+        "source": "/services/indoor-outdoor-signage",
+        "destination": "/services/signage",
+        "permanent": true
+      },
+      {
+        "source": "/services/flex-banners",
+        "destination": "/services/flex-banner",
+        "permanent": true
+      },
+      {
+        "source": "/services/vinyl-graphics",
+        "destination": "/services/vinyl",
+        "permanent": true
+      },
+      {
+        "source": "/services/fabric-printing",
+        "destination": "/services/fabric",
+        "permanent": true
+      },
+      {
+        "source": "/services/promotional-items",
+        "destination": "/services/promotional",
+        "permanent": true
+      },
+      {
+        "source": "/services/creative-design",
+        "destination": "/services/design",
+        "permanent": true
+      },
+      {
+        "source": "/services/event-services",
+        "destination": "/services/events",
+        "permanent": true
+      }
+    ]
   },
   "appDir": "C:\\Users\\caleb_8h6kswm\\Documents\\GitHub\\pana-web",
-  "relativeAppDir": "Documents\\GitHub\\pana-web",
+  "relativeAppDir": "",
   "files": [
     ".next-dev\\routes-manifest.json",
     ".next-dev\\server\\pages-manifest.json",

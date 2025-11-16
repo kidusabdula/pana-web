@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "ead1b8cd48d07953f795153af08e933b",
-    "previewModeSigningKey": "c6fc5d86002f16ead049c528958b6599612740fb869a1647136ee44f9106e95e",
-    "previewModeEncryptionKey": "07c6beac11501f99dc9620f7338211ad0a50bca5970cd0dc6c30dc64b1949672"
-  }
-}
+{"version":4,"routes":{"/services/digital-print":{},"/services/signage":{},"/services/flex-banner":{},"/services/vinyl":{},"/services/fabric":{},"/services/promotional":{},"/services/design":{},"/services/events":{}},"dynamicRoutes":{"/services/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/services/[slug]","routeRegex":"^\\/services\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"c41e66383d9254b54039874daafa7c5b","previewModeSigningKey":"da3c8c4a8bc2f8e38a3475e79dfc3425ac908db37d209931f5bbd89939859718","previewModeEncryptionKey":"012cdfaee7b423b12c3e4f669c130ffc72713fbcaaf4fd23d41af3e875776291"}}

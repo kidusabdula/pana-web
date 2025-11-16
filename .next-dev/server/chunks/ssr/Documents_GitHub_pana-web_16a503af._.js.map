@@ -1,1 +1,0 @@
-{"version":3,"sources":["turbopack:///[project]/Documents/GitHub/pana-web/app/page.tsx"],"sourcesContent":["// app/page.tsx\r\nimport { redirect } from 'next/navigation'\r\n\r\nexport default function HomePage() {\r\n  redirect('/home')\r\n}"],"names":[],"mappings":"6KACA,EAAA,CAAA,CAAA,OAAA,IAAA,EAAA,EAAA,CAAA,CAAA,OAEe,SAAS,IACtB,CAAA,EAAA,EAAA,QAAA,AAAQ,EAAC,QACX"}
