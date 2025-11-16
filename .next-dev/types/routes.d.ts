@@ -4,7 +4,7 @@
 type AppRoutes = "/" | "/about" | "/blog" | "/home" | "/services" | "/services/[slug]"
 type PageRoutes = never
 type LayoutRoutes = "/"
-type RedirectRoutes = never
+type RedirectRoutes = "/services/creative-design" | "/services/digital-paper-print-solutions" | "/services/event-services" | "/services/fabric-printing" | "/services/flex-banners" | "/services/indoor-outdoor-signage" | "/services/promotional-items" | "/services/vinyl-graphics"
 type RewriteRoutes = never
 type Routes = AppRoutes | PageRoutes | LayoutRoutes | RedirectRoutes | RewriteRoutes
 
@@ -16,6 +16,14 @@ interface ParamMap {
   "/home": {}
   "/services": {}
   "/services/[slug]": { "slug": string; }
+  "/services/creative-design": {}
+  "/services/digital-paper-print-solutions": {}
+  "/services/event-services": {}
+  "/services/fabric-printing": {}
+  "/services/flex-banners": {}
+  "/services/indoor-outdoor-signage": {}
+  "/services/promotional-items": {}
+  "/services/vinyl-graphics": {}
 }
 
 

@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  distDir: "build",
+  distDir: ".next-dev",
   // Ensure Next traces files from the actual project root to avoid mis-inferred workspace roots
   outputFileTracingRoot: __dirname,
   async redirects() {

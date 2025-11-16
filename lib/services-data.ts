@@ -62,7 +62,7 @@ export const services: ServiceSpec[] = [
       '<p>Scale up your message with large-format capabilities and durable materials that stand up to real-world use.</p>',
     features: ['UV-stable inks', 'Reinforced hems & eyelets', 'Large-format up to 3.2m width'],
     images: [
-      { src: '/sample-1.jpg', alt: 'Outdoor flex banner on building' },
+      { src: '/flexbanner.jpg', alt: 'Flex banner production on large-format printer' },
       { src: '/sample-2.jpg', alt: 'Event banner with crowd' },
     ],
     options: {
@@ -144,7 +144,7 @@ export const services: ServiceSpec[] = [
       '<p>Partner with a creative team that aligns design to outcomes. We develop brand identities, campaign visuals, and production-ready assets that look great and work hard across print and digital.</p>',
     features: ['Logo & identity systems', 'Campaign and marketing visuals', 'Print-ready and digital templates'],
     images: [
-      { src: '/sample-1.jpg', alt: 'Design moodboard' },
+      { src: '/graphicdesign.jpg', alt: 'Graphic design mockup signage' },
       { src: '/sample-3.jpeg', alt: 'Layout design preview' },
     ],
     options: {
