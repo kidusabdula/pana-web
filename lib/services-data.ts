@@ -17,7 +17,7 @@ export const services: ServiceSpec[] = [
     ],
     equipment: 'Konica Minolta AccurioPress series, Duplo binders, cold/hot laminators',
     images: [
-      { src: '/sample-1.jpg', alt: 'Brochure stack with vibrant colors' },
+      { src: '/digitalpaperprint.jpg', alt: 'Accordion brochure mockup on concrete surface' },
       { src: '/sample-2.jpg', alt: 'Business card close-up' },
       { src: '/sample-3.jpeg', alt: 'Magazine spread' },
       { src: '/sample-4.png', alt: 'Event posters' },
