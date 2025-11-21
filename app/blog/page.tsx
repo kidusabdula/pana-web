@@ -127,15 +127,15 @@ export default function BlogPage() {
           </div>
 
           <div className="flex flex-wrap gap-6 text-sm">
-            <div className="rounded-2xl border border-primary/20 bg-white/80 px-6 py-4 shadow-sm backdrop-blur">
+            <div className="rounded-2xl border border-primary/25 bg-background/90 px-6 py-4 shadow-md backdrop-blur-xl dark:bg-background/40">
               <p className="text-3xl font-semibold text-primary">72%</p>
               <p className="text-muted-foreground">Average uplift in perceived brand exclusivity</p>
             </div>
-            <div className="rounded-2xl border border-border/60 bg-white/60 px-6 py-4 shadow-sm backdrop-blur">
+            <div className="rounded-2xl border border-border/70 bg-background/90 px-6 py-4 shadow-md backdrop-blur-xl dark:bg-background/40">
               <p className="text-3xl font-semibold text-foreground">19</p>
               <p className="text-muted-foreground">Proprietary launch playbooks tested in-market</p>
             </div>
-            <div className="rounded-2xl border border-border/60 bg-white/60 px-6 py-4 shadow-sm backdrop-blur">
+            <div className="rounded-2xl border border-border/70 bg-background/90 px-6 py-4 shadow-md backdrop-blur-xl dark:bg-background/40">
               <p className="text-3xl font-semibold text-foreground">4 continents</p>
               <p className="text-muted-foreground">Brand activations fueled by Pana production</p>
             </div>
